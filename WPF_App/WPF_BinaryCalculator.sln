@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_BinaryCalculator", "WPF_BinaryCalculator.csproj", "{FF75F6C6-2CA8-4933-809F-4A1445DA3BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "..\Calculator\Calculator.csproj", "{D163C7CC-D18E-7A13-5B5B-07DDB02C6BF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF75F6C6-2CA8-4933-809F-4A1445DA3BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF75F6C6-2CA8-4933-809F-4A1445DA3BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF75F6C6-2CA8-4933-809F-4A1445DA3BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF75F6C6-2CA8-4933-809F-4A1445DA3BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D163C7CC-D18E-7A13-5B5B-07DDB02C6BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D163C7CC-D18E-7A13-5B5B-07DDB02C6BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D163C7CC-D18E-7A13-5B5B-07DDB02C6BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D163C7CC-D18E-7A13-5B5B-07DDB02C6BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C0153ED-D173-4DE8-94E7-1D0889A660F9}
+	EndGlobalSection
+EndGlobal

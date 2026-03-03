@@ -1,0 +1,121 @@
+﻿<Window x:Class="WPF_BinaryCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_BinaryCalculator"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Calculator" Height="550" Width="450">
+    <Grid Background="#FF303030">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="Text_Result"
+                       Margin="0, 35, 25, 0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Foreground="White"
+                       FontSize="48"
+                       Text="0"/>
+            <TextBlock x:Name="Text_BinaryNum"
+                       Margin="0, 0, 25, 0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Foreground="White"
+                       FontSize="24"
+                       Text="0"/>
+            <TextBlock x:Name="Text_BitsCount"
+                       Margin="0, 0, 25, 0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Foreground="White"
+                       FontSize="16"
+                       Text="1 bits"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyle}" Content="C" FontSize="14" Click="Button_ClearText"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="/" Click="Button_SelectOperation"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="x" Click="Button_SelectOperation"/>
+        </StackPanel>
+
+        <Button Grid.Row="1" Grid.Column="1"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ButtonStyle}" Content="&lt;-"
+                Click="Button_DeleteLastDigit"/>
+
+
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyle}" Content="7" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="8" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="9" Click="Button_EnterDigit"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="1"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ButtonStyle}" Content="-" Click="Button_SelectOperation"/>
+        
+
+        <StackPanel Grid.Row="3"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyle}" Content="4" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="5" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="6" Click="Button_EnterDigit"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" Grid.Column="1"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ButtonStyle}" Content="+" Click="Button_SelectOperation"/>
+        
+
+        <StackPanel Grid.Row="4"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyle}" Content="1" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="2" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="3" Click="Button_EnterDigit"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="5"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Button Style="{DynamicResource ButtonStyle}" Content="+/-" Click="Button_ChangeSign"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content="0" Click="Button_EnterDigit"/>
+            <Button Style="{DynamicResource ButtonStyle}" Content=""/>
+        </StackPanel>
+
+        <Button Grid.Row="4" Grid.RowSpan="2"
+                Grid.Column="1"
+                Content="="
+                Click="Button_ExecuteOperation"
+                HorizontalAlignment="Left"
+                Margin="0, 0, 90, 0"
+                Width="65"
+                Height="130"/>
+
+    </Grid>
+</Window>
